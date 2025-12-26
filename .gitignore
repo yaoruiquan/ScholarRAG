@@ -14,6 +14,9 @@ env/
 # Data (知识库和数据库)
 data/
 
+# 进展文档（不上传）
+进展/
+
 # IDE
 .vscode/
 .idea/

@@ -25,7 +25,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/YOUR_USERNAME/ScholarRAG.git
+git clone https://github.com/yaoruiquan/ScholarRAG.git
 cd ScholarRAG
 
 # 创建虚拟环境
@@ -67,18 +67,26 @@ streamlit run app.py
 ```
 ScholarRAG/
 ├── app.py                 # Streamlit 主应用
+├── README.md
+├── requirements.txt
+├── .env.example           # 环境变量模板
+├── .gitignore
+│
 ├── src/
+│   ├── __init__.py
+│   ├── config.py          # 配置管理
+│   ├── rag_chain.py       # RAG 核心逻辑
 │   ├── ingest.py          # 文档处理和向量化
-│   ├── rag_chain.py       # RAG 链核心逻辑
 │   ├── reranker.py        # LLM Reranker
 │   ├── query_expansion.py # 查询扩展
 │   ├── document_loader.py # 多格式文档加载
 │   └── chat_db.py         # SQLite 聊天历史
+│
 ├── evaluation/
+│   ├── __init__.py
 │   └── ragas_eval.py      # RAG 评估模块
-├── data/                  # 知识库数据 (不上传)
-├── requirements.txt
-└── .env.example
+│
+└── data/                  # 知识库数据 (Git 忽略)
 ```
 
 ## 📊 评估指标
